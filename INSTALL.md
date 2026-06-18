@@ -50,7 +50,7 @@ node -v
 You need the project folder on your laptop. Two options — pick one:
 
 ### Option A — Download as ZIP (simplest)
-1. Open the project page: **<YOUR-REPO-URL>**
+1. Open the project page: **https://github.com/Mvstnz/marketing-system**
 2. Click the green **`< > Code`** button → **Download ZIP**.
 3. Find the ZIP in your **Downloads**, right-click → **Extract All…**
 4. Extract it to a place you'll remember, e.g. `Documents`. You now have a folder named
@@ -59,7 +59,7 @@ You need the project folder on your laptop. Two options — pick one:
 ### Option B — With Git (lets you get updates later with one command)
 ```
 cd $HOME\Documents
-git clone <YOUR-REPO-URL> marketing-system
+git clone https://github.com/Mvstnz/marketing-system.git marketing-system
 ```
 (If `git` is "not recognized", just use Option A.)
 
