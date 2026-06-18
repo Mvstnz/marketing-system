@@ -1,0 +1,12 @@
+# Generated content archive (created at runtime)
+output/*
+!output/.gitkeep
+
+# Real brand data — filled in per-install, not shipped in the repo
+.agents/brand/*.csv
+.agents/brand/samples/*
+!.agents/brand/samples/README.md
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
