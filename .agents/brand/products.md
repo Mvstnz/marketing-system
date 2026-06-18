@@ -1,11 +1,9 @@
-# Product Catalog
+# Product Cache (optional)
 
-> TEMPLATE — filled in by `/marketing-setup` from the Shopify CSV export.
-> Only include facts that exist in the source data. Never invent ingredients or claims.
-
-## How to read this file
-Each product below is the single source of truth for marketing content.
-If a product is missing or outdated, re-run `/marketing-update` with a fresh CSV.
+> This is NOT a full catalog. The brand has hundreds of products, so products are
+> fetched on-demand from a link in `/marketing`. This file is just an optional cache
+> of products already worked on — entries are added automatically when the user pastes
+> a product link and chooses to save it. Only include facts from the source. Never invent.
 
 ---
 

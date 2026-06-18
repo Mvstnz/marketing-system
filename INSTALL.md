@@ -107,13 +107,15 @@ Check it worked: type **`/marketing`**.
 
 ## Step 6 — Build your Brand Kit (one time)
 
-Before creating content, the system needs to learn your brand. Gather:
+Before creating content, the system learns your brand's **voice and audience**.
+You do **not** need to gather all your products — when you create a post you'll just
+paste that product's link.
 
-1. **Your Shopify products** — in Shopify: **Products → Export → Export** (CSV file).
-   Move that CSV file into the `.agents\brand\` folder inside the project.
-2. **Your best past posts** — save 10–20 typical **Instagram captions** (English) and
+Gather:
+1. **Your best past posts** — save 10–20 typical **Instagram captions** (English) and
    2–3 **newsletters** (German) as text files into `.agents\brand\samples\`.
    (1–2 blog posts in German too, if you have them.)
+2. **A sentence about your customers** — who buys, age, skin concerns.
 
 Then, in Codex, type:
 
@@ -121,8 +123,11 @@ Then, in Codex, type:
 /marketing-setup
 ```
 
-It will read your files and ask you a few questions in English. At the end it shows you
+It will read your posts and ask you a few questions in English. At the end it shows you
 your brand voice — **read it once and correct anything that sounds wrong.**
+
+> Later, to create content: type `/marketing`, paste the product link, and pick what to
+> make.
 
 ---
 

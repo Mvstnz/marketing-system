@@ -65,10 +65,18 @@ markenkonforme Marketing-Inhalte mit minimaler Eingabe erstellt.
 
 ## 5. Fundament: Brand Kit
 
-Aufgebaut durch `/marketing-setup` aus zwei Quellen:
+> **Architektur-Schwenk (F25):** Kein Produktkatalog vorab. Die Marke hat ~800 Produkte —
+> niemand trägt 800 Links zusammen. Stattdessen **„Link pro Erstellung"**: Setup baut nur
+> das dauerhafte Marken-Wissen (Tonfall + Zielgruppen); einzelne Produkte werden bei der
+> Erstellung aus einem eingefügten Link **live geholt** (und optional in `products.md`
+> als Cache gespeichert). Produkt-URLs sind die Hauptquelle; CSV/Screenshots/Text als
+> Fallback. Setzt Web-Zugriff im Agenten voraus (beim Testlauf prüfen).
 
-- **Produkte:** manueller **Shopify-CSV-Export** (Products → Export) → `brand/products.md`. F5
+Aufgebaut durch `/marketing-setup`:
+
 - **Tonfall:** **kuratierte Beispiel-Posts** (10–20 repräsentative) → abgeleitet, einmal von der Nutzerin gegengelesen. F6
+- **Zielgruppen:** ein paar Stichworte → `audience.md`.
+- **Produkte:** **optional** — kein Pflicht-Katalog; `products.md` ist nur ein Cache. F25
 
 ### Datei-Struktur `brand/`
 ```

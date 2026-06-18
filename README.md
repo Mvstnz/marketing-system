@@ -24,8 +24,9 @@ questions (you pick from numbered options), then writes finished, on-brand conte
    ```
    npx skills add coreyhaines31/marketingskills
    ```
-3. Run **`/marketing-setup`** and follow the steps (it builds your Brand Kit from
-   your Shopify product export + a handful of your best past posts).
+3. Run **`/marketing-setup`** and follow the steps. It builds your Brand Kit (tone of
+   voice + audience) from a handful of your best past posts. You do **not** need to
+   load all your products — when you create content you just paste that product's link.
 
 > Full step-by-step Windows install guide: see **`INSTALL.md`**.
 

@@ -22,43 +22,29 @@ into a clean, reusable **Brand Kit** under `.agents/brand/`.
 
 ## Step 1 — Locate the source material
 
-Check `.agents/brand/` and `.agents/brand/samples/` for files the user has added.
-You need:
+The brand has hundreds of products, so **do NOT try to build a full product catalog.**
+Setup focuses on the durable, reusable brand knowledge: **tone of voice + audience.**
+Individual products are pulled on-demand from a link each time content is created
+(in `/marketing`). The required material is:
 
-1. **Product data** — accept ANY of these, whichever the user has (you can mix them):
-   - **Product page URLs** (easiest & richest) — the user pastes a list of shop links
-     (e.g. `https://saranghae.ch/products/...`). Fetch each page and extract the data.
-     Requires web access; if the agent can't fetch URLs, fall back to the options below.
-   - **Shopify CSV export** (Shopify: Products → Export), placed in `.agents/brand/`.
-   - **Screenshots / images** of the product list and/or detail pages, placed in
-     `.agents/brand/` (the user can attach images directly in chat too).
-   - **Pasted text** (e.g. copied product names/descriptions).
-   > A list-view screenshot usually gives only **name + price**. URLs and detail-page
-   > screenshots give ingredients, benefits, and descriptions too. The user can fill any
-   > gaps later with `/marketing-update`.
-2. **Example posts** — placed in `.agents/brand/samples/`. Ideally:
+1. **Example posts** — placed in `.agents/brand/samples/`. Ideally:
    - 10–20 typical Instagram captions (English)
    - 2–3 newsletters / emails (German)
    - 1–2 blog posts (German), if available
-3. **Audience notes** — a few words on who buys (age, skin concerns, segments).
+2. **Audience notes** — a few words on who buys (age, skin concerns, segments).
    Ask for these if not provided.
 
-If material is missing, tell the user **in English** exactly what to add and where
-(e.g. "Please drop your Shopify product CSV into the `.agents/brand/` folder and your
-best Instagram captions as text files into `.agents/brand/samples/`, then say 'ready'").
+If this material is missing, tell the user **in English** exactly what to add and where
+(e.g. "Please drop 10–20 of your best Instagram captions as text files into
+`.agents/brand/samples/`, and tell me in a sentence who your typical customers are").
 
-## Step 2 — Build the product catalog → `.agents/brand/products.md`
+## Step 2 — Products are optional (no upfront catalog)
 
-Read the product data from whatever source the user provided — **product URLs (fetch
-each page), CSV, screenshots/images, or pasted text**. For each product capture (only
-what is actually present in the source):
-name, type/category, key ingredients, benefits/claims as written by the brand,
-price, variants, and any usage notes. Write a clean, readable catalog.
-
-- Do not add benefits or claims that are not in the source data.
-- If a field isn't visible (common with list-view screenshots), leave it blank and add
-  `<!-- missing: ingredients/description — add via /marketing-update -->` so gaps are
-  obvious and can be filled later when the CSV or detail pages are available.
+`.agents/brand/products.md` is just an **optional cache** of products the user has
+already worked on. **Skip it during setup** unless the user explicitly wants a few
+bestsellers saved. The normal flow is: in `/marketing`, the user pastes a product link
+and the system fetches that product's data on the spot (and can save it to
+`products.md` for reuse). Never invent product facts.
 
 ## Step 3 — Derive the tone of voice → `voice-de.md` and `voice-en.md`
 

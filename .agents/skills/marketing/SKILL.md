@@ -16,10 +16,11 @@ finished, on-brand content.
 - **Generate the CONTENT in the channel's language** (see matrix below) — but explain
   what you're doing in English.
 - **Read the Brand Kit FIRST**, every run:
-  `.agents/brand/voice-de.md`, `.agents/brand/voice-en.md`,
-  `.agents/brand/products.md`, `.agents/brand/audience.md`.
-  - If `products.md` still contains the "_(not filled in yet)_" placeholder, stop and
+  `.agents/brand/voice-de.md`, `.agents/brand/voice-en.md`, `.agents/brand/audience.md`
+  (and `.agents/brand/products.md` only as an optional cache of saved products).
+  - If the voice files still contain the "_(not filled in yet)_" placeholder, stop and
     tell her **in English** to run `/marketing-setup` first.
+  - Product data is **not** stored upfront — it comes from the link in Step 1.
 - **Ask only what you cannot infer.** Set content language automatically. Turn every
   required question into **numbered options** generated from the Brand Kit — she types a
   number, she doesn't write prose. Mark anything you assumed as `Assumption: …` so she
@@ -42,7 +43,28 @@ finished, on-brand content.
 | Newsletter / promo email / subject lines | German |
 | Product description | German + English |
 
-## Step 1 — Main menu
+## Step 1 — Which product? (ask FIRST)
+
+The brand has hundreds of products, so there is **no full upfront catalog**. Establish
+the product for this task right away:
+
+```
+Which product is this about?
+- Paste the product link (e.g. a saranghae.ch URL), or
+- type the product name, or
+- type "none" for a brand-wide / non-product asset (e.g. general campaign idea).
+```
+
+- If she pastes a **URL**: fetch the page and pull the product data (name, ingredients,
+  benefits as written, price, usage). Use ONLY what's on the page; never invent.
+  Optionally offer to save it to `products.md` for reuse.
+- If she types a **name** that's already in `products.md`: use that saved data.
+- If web access is unavailable and the product isn't saved: ask her to paste the key
+  details (or a screenshot).
+- This product context is now **set for the whole task** — the asset flows below must
+  **not ask for the product again**.
+
+## Step 2 — What to create
 
 Show this menu and ask her to type a number:
 
@@ -64,6 +86,11 @@ What would you like to create?
 All asset types are implemented. For **9) Image prompt**, read and follow
 `references/image-prompt.md`. For the others, follow the matching section below.
 
+> Wherever an asset section below mentions choosing a "product" / "featured product" /
+> "from products.md", that is **already decided in Step 1** — use it, don't re-ask.
+> (Multi-product assets like a newsletter or campaign may still ask whether to add
+> more products; a single pasted link covers the main one.)
+
 Note: Instagram feed posts (1) double as **Facebook** posts (cross-posted 1:1).
 
 ---
@@ -74,14 +101,11 @@ Content language: **English**. Apply the `social` skill's Instagram principles +
 `voice-en.md`.
 
 ### Intake (numbered options, minimal)
-Ask these, each as a numbered list. Generate the option values from the Brand Kit /
-her seed input. Pre-fill sensible defaults and mark assumptions.
+Product is **already set from Step 1** — do NOT ask again. Ask only:
 
-1. **Product / topic** — list products from `products.md` as options + "Other (type it)".
-   This is the one thing you usually cannot guess; ask it first.
-2. **Goal** — `1) Awareness  2) Engagement  3) Drive sales  4) Educate  5) Launch`
-3. **Audience** — list the segments from `audience.md` as options.
-4. **Angle** — generate **3 concrete hooks** specific to this product + goal as options,
+1. **Goal** — `1) Awareness  2) Engagement  3) Drive sales  4) Educate  5) Launch`
+2. **Audience** — list the segments from `audience.md` as options.
+3. **Angle** — generate **3 concrete hooks** specific to this product + goal as options,
    plus "Surprise me".
 
 If she gave a free-text brief that already answers some of these, skip those questions.
