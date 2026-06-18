@@ -25,6 +25,10 @@ finished, on-brand content.
   number, she doesn't write prose. Mark anything you assumed as `Assumption: …` so she
   can override.
 - **Never invent product facts.** Use only what's in `products.md`.
+- **Inline product links:** if the user pastes a product URL (e.g. a saranghae.ch link)
+  anywhere in the flow, fetch that page, use its data for this asset, and offer to add
+  the product to `products.md` so it's in the catalog next time. (Falls back to asking
+  her to paste the details if the agent has no web access.)
 - **Orchestrate the library for quality, don't hand off control.** Apply the frameworks
   from the installed `coreyhaines31/marketingskills` skills (e.g. `social`, `copywriting`)
   using the Brand Kit as context — but do NOT re-run their long questionnaires; you have
