@@ -14,14 +14,14 @@ Ask what she wants to update (offer numbered options):
 
 ```
 What would you like to update?
-1) Products — fresh Shopify CSV, screenshots, or pasted text
+1) Products — product URLs, fresh Shopify CSV, screenshots, or pasted text
 2) Voice — I added new example posts
 3) Fix something specific (a product, a wording, the tone)
 ```
 
 ## 1) Products
-Read the new product data from `.agents/brand/` — **CSV, screenshots/images, or pasted
-text** — and rebuild `.agents/brand/products.md` (same rules as setup: only facts from
+Read the new product data — **product URLs (fetch each), CSV, screenshots/images, or
+pasted text** — and rebuild `.agents/brand/products.md` (same rules as setup: only facts from
 the source, never invent claims; fill previously-missing fields when now available).
 Show a short English summary of what changed (added / removed / updated products).
 

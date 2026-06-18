@@ -25,14 +25,17 @@ into a clean, reusable **Brand Kit** under `.agents/brand/`.
 Check `.agents/brand/` and `.agents/brand/samples/` for files the user has added.
 You need:
 
-1. **Product data** — accept ANY of these, whichever the user has:
-   - **Shopify CSV export** (best — Shopify: Products → Export), placed in `.agents/brand/`.
-   - **Screenshots / images** of the product list and/or product detail pages, placed in
+1. **Product data** — accept ANY of these, whichever the user has (you can mix them):
+   - **Product page URLs** (easiest & richest) — the user pastes a list of shop links
+     (e.g. `https://saranghae.ch/products/...`). Fetch each page and extract the data.
+     Requires web access; if the agent can't fetch URLs, fall back to the options below.
+   - **Shopify CSV export** (Shopify: Products → Export), placed in `.agents/brand/`.
+   - **Screenshots / images** of the product list and/or detail pages, placed in
      `.agents/brand/` (the user can attach images directly in chat too).
    - **Pasted text** (e.g. copied product names/descriptions).
-   > A list-view screenshot usually gives only **name + price**. For ingredients,
-   > benefits, and descriptions, ask for **product detail pages** too (or a CSV later).
-   > Tell the user she can fill gaps anytime later with `/marketing-update`.
+   > A list-view screenshot usually gives only **name + price**. URLs and detail-page
+   > screenshots give ingredients, benefits, and descriptions too. The user can fill any
+   > gaps later with `/marketing-update`.
 2. **Example posts** — placed in `.agents/brand/samples/`. Ideally:
    - 10–20 typical Instagram captions (English)
    - 2–3 newsletters / emails (German)
@@ -46,8 +49,9 @@ best Instagram captions as text files into `.agents/brand/samples/`, then say 'r
 
 ## Step 2 — Build the product catalog → `.agents/brand/products.md`
 
-Read the product data from whatever source the user provided — **CSV, screenshots/images,
-or pasted text**. For each product capture (only what is actually visible in the source):
+Read the product data from whatever source the user provided — **product URLs (fetch
+each page), CSV, screenshots/images, or pasted text**. For each product capture (only
+what is actually present in the source):
 name, type/category, key ingredients, benefits/claims as written by the brand,
 price, variants, and any usage notes. Write a clean, readable catalog.
 
