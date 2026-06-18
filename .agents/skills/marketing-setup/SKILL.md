@@ -27,12 +27,14 @@ Setup focuses on the durable, reusable brand knowledge: **tone of voice + audien
 Individual products are pulled on-demand from a link each time content is created
 (in `/marketing`). The required material is:
 
-1. **Example posts** — placed in `.agents/brand/samples/`. Ideally:
+1. **Example posts** — EITHER placed as text files in `.agents/brand/samples/`, OR
+   simply **pasted directly into the chat** by the user (accept both). Ideally:
    - 10–20 typical Instagram captions (English)
    - 2–3 newsletters / emails (German)
    - 1–2 blog posts (German), if available
+   If the user pastes them in chat, use that text directly — don't insist on files.
 2. **Audience notes** — a few words on who buys (age, skin concerns, segments).
-   Ask for these if not provided.
+   Just ask her to type one sentence if not provided.
 
 If this material is missing, tell the user **in English** exactly what to add and where
 (e.g. "Please drop 10–20 of your best Instagram captions as text files into
