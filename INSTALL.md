@@ -45,18 +45,26 @@ node -v
 
 ---
 
-## Step 2 — Get the project folder
+## Step 2 — Download the project
 
-Your developer will send you a file called **`marketing-system.zip`** (by email or a
-cloud link).
+You need the project folder on your laptop. Two options — pick one:
 
-1. Save it somewhere easy to find, e.g. your **Documents** folder.
-2. Right-click the ZIP → **Extract All…** → extract it into **Documents**.
-3. You now have a folder named **`marketing-system`**.
+### Option A — Download as ZIP (simplest, no account needed)
+1. Open the project page: **https://github.com/Mvstnz/marketing-system**
+2. Click the green **`< > Code`** button → **Download ZIP**.
+3. Find the ZIP in your **Downloads**, right-click → **Extract All…**
+4. Extract it into your **Documents** folder. You now have a folder named
+   **`marketing-system-main`** (rename it to `marketing-system` if you like).
 
-> Whenever the developer sends you an updated ZIP later, just extract it the same way
-> (replace the old folder) — your brand data and saved content stay in the folders you
-> filled in, so back those up first if unsure.
+### Option B — With Git (lets you get updates later with one command: `git pull`)
+```
+cd $HOME\Documents
+git clone https://github.com/Mvstnz/marketing-system.git marketing-system
+```
+(If `git` is "not recognized", just use Option A.)
+
+> Note: if you used Option A, the folder is `marketing-system-main`. Use that name in
+> Step 3 unless you renamed it.
 
 ---
 
@@ -134,4 +142,5 @@ Whenever you add new products or change style later, run **`/marketing-update`**
   screenshot.
 - **`npx` or `node` not recognized:** redo Step 1 (install Node.js), then close and
   reopen the terminal.
+- **`git` not recognized:** use Step 2 Option A (Download ZIP) instead.
 - **Anything else:** copy the full error text and send it to your developer.
